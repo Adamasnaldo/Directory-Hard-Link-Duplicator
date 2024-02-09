@@ -106,6 +106,8 @@ if not exist "%ORIGINAL_DIR%" (
     exit /b 1
 )
 
+echo Copying from '%ORIGINAL_DIR%'
+
 @REM Open folder browser to select the new directory
 call :set_psCommand "to (new)"
 
@@ -122,6 +124,8 @@ if not exist "%NEW_DIR%" (
     echo ERROR: Invalid directory
     exit /b 1
 )
+
+echo Copying to '%NEW_DIR%'
 
 
 @REM Restore the original code page
